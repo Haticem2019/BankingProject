@@ -1,0 +1,240 @@
+<!-- <template>
+    <div class="slds-grid slds-wrap">
+        
+        <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+            <lightning-combobox
+                name="applicantType"
+                label="Applicant Type"
+                value={applicantTypeValue}
+                placeholder="Chose your applicant type"
+                options={applicantTypeOptions}
+                onchange={applicantTypeHandleChange} 
+                required
+                class="validateCombobox"
+            ></lightning-combobox>
+        </div>
+           
+        <div class="slds-col slds-size_6-of-12 slds-align_absolute-center slds-p-around_small">
+        <lightning-button 
+            variant="brand"
+            label="Add Applicant" 
+            onclick={addApplicantHandler} 
+            disabled={showAddApplicant}
+        ></lightning-button>
+        </div>
+    </div>
+   
+    <template if:true={showAddApplicant}>
+        <lightning-card title="Add Applicant" icon-name="utility:adduser" variant="base">
+            <div class="slds-grid slds-wrap ">
+                
+                <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                    <lightning-input 
+                    type="text"
+                    label="First Name"
+                    required
+                    onchange={firstNameHandler}
+                ></lightning-input>
+                </div>
+              
+                <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                    <lightning-input 
+                    type="text"
+                    label="Last Name"
+                    required
+                    onchange={lastNameHandler}
+                ></lightning-input>
+                </div>
+                    
+                <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                    <lightning-input 
+                    type="text"
+                    label="SSN"
+                    max-length=9
+                    min-length=9
+                    required
+                    onchange={ssnHandler}
+                ></lightning-input>
+                </div>
+                
+                <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                    <lightning-input 
+                        type="date"
+                        label="Date of Birth"
+                        onchange={dateOfBirthHandler}
+                        required
+                    ></lightning-input>
+                </div>
+                   
+                <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                    <lightning-input 
+                        type="tel"
+                        label="Mobile"
+                        onchange={mobileHandler}
+                        required
+                    ></lightning-input>
+                </div>
+                   
+                <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                    <lightning-input 
+                        type="email"
+                        label="Email"
+                        onchange={emailHandler}
+                        required
+                    ></lightning-input>
+                </div>
+               
+                <div class="slds-col slds-size_12-of-12 slds-p-around_small">
+                    <lightning-textarea 
+                        max-length="1000"
+                        name="address" 
+                        label="Address" 
+                        placeholder="Enter your address..."
+                        value={addressValue}
+                        variant="standard"
+                        onchange={addressHandler}
+                    ></lightning-textarea>
+                </div>  
+               
+                <div class="slds-col slds-size_12-of-12 slds-align_absolute-center">
+                    <lightning-button 
+                        class="slds-m-around_small"
+                        variant="brand"
+                        label="Save" 
+                        onclick={saveHandler} 
+                    ></lightning-button>
+                    <lightning-button 
+                        class="slds-m-around_small"
+                        variant="brand"
+                        label="Close" 
+                        onclick={closeHandler} 
+                    ></lightning-button>
+                </div>
+            </div>
+        </lightning-card>
+    </template>
+    
+</template> -->
+<!--            The below code is to use with short way    -->
+<template>
+  <div class="slds-grid slds-wrap">
+      
+      <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+          <lightning-combobox
+              name="applicantType"
+              label="Applicant Type"
+              value={applicantTypeValue}
+              placeholder="Chose your applicant type"
+              options={applicantTypeOptions}
+              onchange={applicantTypeHandleChange} 
+              required
+              class="validateCombobox"
+          ></lightning-combobox>
+      </div>
+         
+      <div class="slds-col slds-size_6-of-12 slds-align_absolute-center slds-p-around_small">
+      <lightning-button 
+          variant="brand"
+          label="Add Applicant" 
+          onclick={addApplicantHandler} 
+          disabled={showAddApplicant}
+      ></lightning-button>
+      </div>
+  </div>
+ 
+  <template if:true={showAddApplicant}>
+      <lightning-card title="Add Applicant" icon-name="utility:adduser" variant="base">
+          <div class="slds-grid slds-wrap ">
+              
+              <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                  <lightning-input 
+                  name="First_Name__c"
+                  type="text"
+                  label="First Name"
+                  required
+                  onchange={handleChange}
+                  
+              ></lightning-input>
+              </div>
+            
+              <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                  <lightning-input
+                  name="Last_Name__c" 
+                  type="text"
+                  label="Last Name"
+                  required
+                  onchange={handleChange}
+              ></lightning-input>
+              </div>
+                  
+              <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                  <lightning-input 
+                  name="SSN__c"
+                  type="text"
+                  label="SSN"
+                  max-length=9
+                  min-length=9
+                  required
+                  onchange={handleChange}
+              ></lightning-input>
+              </div>
+              
+              <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                  <lightning-input 
+                      name="Date_Of_Birth__c"
+                      type="date"
+                      label="Date of Birth"
+                      onchange={handleChange}
+                      required
+                  ></lightning-input>
+              </div>
+              <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                  <lightning-input 
+                      name="Mobile__c"
+                      type="tel"
+                      label="Mobile"
+                      onchange={handleChange}
+                      required
+                  ></lightning-input>
+              </div>
+              <div class="slds-col slds-size_6-of-12 slds-p-around_small">
+                  <lightning-input 
+                      name="Email__c"
+                      type="email"
+                      label="Email"
+                      onchange={handleChange}
+                      required
+                  ></lightning-input>
+              </div>
+              
+              <div class="slds-col slds-size_12-of-12 slds-p-around_small">
+                  <lightning-textarea 
+                      max-length="1000"
+                      name="Address__c" 
+                      label="Address" 
+                      placeholder="Enter your address..."
+                      value={addressValue}
+                      variant="standard"
+                      onchange={handleChange}
+                  ></lightning-textarea>
+              </div>  
+             
+              <div class="slds-col slds-size_12-of-12 slds-align_absolute-center">
+                  <lightning-button 
+                      class="slds-m-around_small"
+                      variant="brand"
+                      label="Save" 
+                      onclick={saveHandler} 
+                  ></lightning-button>
+                  <lightning-button 
+                      class="slds-m-around_small"
+                      variant="brand"
+                      label="Close" 
+                      onclick={closeHandler} 
+                  ></lightning-button>
+              </div>
+          </div>
+      </lightning-card>
+  </template>
+  
+</template>

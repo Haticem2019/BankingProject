@@ -1,0 +1,153 @@
+<template>
+
+    <!-- shift +alt +f -> short key to format your code -->
+    <!-- ctrl+/ ->short key to comment out  -->
+<!-- slds -> salesforce lightning design system -->
+
+
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+            <!-- responsive design -> 12 -->
+            
+            <lightning-combobox
+                name="customerType"
+                label="Customer Type"
+                value={customerTypeValue}
+                placeholder="Chose the customer type"
+                options={customerTypeOptions}
+                onchange={customerTypeHandler}
+                required="true" 
+                class="clsFetchScheme">
+                    
+            </lightning-combobox>
+            
+                
+        </div>
+
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+            
+            <lightning-combobox
+                name="depositType"
+                label="Deposit Type"
+                value={depositTypeValue}
+                placeholder="Chose the deposit type"
+                options={depositTypeOptions}
+                onchange={depositTypeHandler}
+                required="true" 
+                class="clsFetchScheme">
+                    
+            </lightning-combobox>
+        </div>
+
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+            <lightning-combobox
+                name="payoutFrequency"
+                label="Payout Frequency"
+                value={payoutFrequencyValue}
+                placeholder="Chose the payout frequency"
+                options={payoutFrequencyOptions}
+                onchange={payoutFrequencyHandler}
+                required="true"
+                class="clsFetchScheme" >
+                    
+            </lightning-combobox>
+        </div>
+
+
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+            <lightning-combobox
+                name="tenorInMonths"
+                label="Tenor In Months"
+                value={tenorInMonthsValue}
+                placeholder="Chose the tenor in months"
+                options={tenorInMonthsOptions}
+                onchange={tenorInMonthsHandler}
+                required="true" 
+                class="clsFetchScheme">
+                    
+            </lightning-combobox>
+        </div>
+
+
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+            <lightning-combobox
+                name="tenorInDays"
+                label="Tenor In Days"
+                value={tenorInDaysValue}
+                placeholder="Chose the tenor in days"
+                options={tenorInDaysOptions}
+                onchange={tenorInDaysHandler}
+                required="true" 
+                class="clsFetchScheme">
+                    
+            </lightning-combobox>
+        </div>
+
+
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+            <lightning-input 
+                type="number"
+                label="FD Amount"
+                value={fdAmountValue}
+                onchange={fdAmountHandler}
+                name="fdAmount"
+                placeholder="Enter FD Amount"
+                class="clsFetchScheme"
+            ></lightning-input>
+        </div>
+
+
+        <div class="slds-col slds-size_12-of-12 slds-p-around_small ">
+            <lightning-button class="slds-align_absolute-center" 
+                variant="success"
+                label="Fetch Scheme" 
+                onclick={fetchSchemeHandler} 
+            ></lightning-button>
+
+        </div>
+
+        <!-- scheme combobox -->
+
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+            <lightning-combobox
+                name="interestScheme"
+                label="Interest Scheme"
+                value={interestSchemeValue}
+                placeholder="Chose the interest scheme"
+                options={schemeOptions}
+                onchange={interestSchemeHandler}
+                required="true" 
+                class="clsSaveButton">
+                    
+            </lightning-combobox>
+        </div>
+        <!-- for gap -->
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+        </div>
+
+        <!-- interest rate field -->
+
+        <div class="slds-col slds-size_4-of-12 slds-p-around_small">
+            <lightning-input 
+                type="number"
+                label="Interest Rate"
+                name="interestRate"
+                value={interestRateValue}
+                disabled="true"
+                class="clsSaveButton"
+            ></lightning-input>
+        </div>
+
+        <div class="slds-col slds-size_12-of-12 slds-p-around_small slds-align_absolute-center">
+            <lightning-button 
+                variant="success"
+                label="Save" 
+                onclick={handleSave} 
+            ></lightning-button>
+
+            
+
+        </div>
+    </div>
+            
+</template>
